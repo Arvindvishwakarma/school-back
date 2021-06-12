@@ -2,72 +2,78 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const roomsSchema = new Schema({
+const studentSchema = new Schema({
 
-    roomType: {
-        type: String,
-        required: true
-    },
-
-    landlordId: {
+    schoolId: {
         type: Schema.Types.ObjectId,
         required: true
     },
 
-    personCapacity: {
+    firstName: {
         type: String,
         required: true
     },
 
-    bathroomAttach: {
+    lastName: {
         type: String,
         required: true
     },
 
-    wifiAvailable: {
+    fatherName: {
         type: String,
         required: true
     },
 
-    kitchenAvailable: {
+    motherName: {
         type: String,
         required: true
     },
 
-    waterElectricityInclude: {
+    dob: {
         type: String,
         required: true
     },
 
-    price: {
+    gender: {
         type: String,
         required: true
     },
 
-    roomAddress: {
+    catagory: {
         type: String,
         required: true
     },
 
-    remark: {
-        type: String,
-    },
-
-    image_public_id: {
-        type: Array,
-        required: true
-    },
-
-    uploadDate: {
+    email: {
         type: String,
         required: true
     },
 
-    uploadTime: {
+    contact: {
         type: String,
         required: true
     },
+
+    class: {
+        type: String,
+        required: true
+    },
+
+    address: {
+        type: String,
+        required: true
+    },
+
+    studentLng: {
+        type: String,
+        required: true
+    },
+
+    studentLat: {
+        type: String,
+        required: true
+    }
 
 });
 
-module.exports = mongoose.model('Rooms', roomsSchema);
+module.exports = mongoose.model('Student', studentSchema);
