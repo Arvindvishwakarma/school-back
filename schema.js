@@ -94,6 +94,7 @@ const schema = buildSchema(`
         createSchool(SchoolInput: schoolInput): schools
         createStudent(schoolId:ID!, StudentInput: studentInput): student
         deleteSchool(schoolId:ID!): schools
+        deleteStudent(studentId:ID!): student
     }
 `)
 

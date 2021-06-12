@@ -121,6 +121,12 @@ const resolvers = {
         return School.findByIdAndRemove(args.schoolId)
     },
 
+    // delete student
+
+    deleteStudent: args => {
+        return Student.findByIdAndRemove(args.studentId)
+    },
+
 }
 
 export default resolvers;
