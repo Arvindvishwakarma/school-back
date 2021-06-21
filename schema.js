@@ -87,6 +87,7 @@ const schema = buildSchema(`
         getSingleSchool(schoolId:ID!): schools
         getStudent: [student]
         getSingleStudent(studentId:ID!): student
+        getStudentsBySchoolId(schoolId:ID!): [student]
     }
 
     type Mutation {

@@ -127,6 +127,11 @@ const resolvers = {
         return Student.findByIdAndRemove(args.studentId)
     },
 
+       // get students by school id
+
+       getStudentsBySchoolId: args => {
+        return Student.find({ schoolId: args.schoolId });
+    },
 }
 
 export default resolvers;
